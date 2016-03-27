@@ -1,0 +1,8 @@
+#JSGF V1.0;
+
+grammar test;
+
+<enable> = (включить);
+<words> = (тест|узи|анастезия|пульс);
+
+public <query> = <enable> <words>;

@@ -1,0 +1,7 @@
+cd ~/practics
+
+./ru4sphinx/text2dict/dict2transcript.pl ./speech_reconginition_project/words ./speech_reconginition_project/words.dict
+
+
+
+pocketsphinx_continuous -hmm ./zero_ru_cont_8k_v3/zero_ru.cd_cont_4000 -dict ./speech_reconginition_project/words.dict -jsgf ./speech_reconginition_project/gram.jsgf -inmic yes -logfn log.log
