@@ -1,8 +1,12 @@
 #JSGF V1.0;
 
-grammar test;
+grammar mygrammar;
 
-<enable> = (включить);
-<words> = (тест|узи|анастезия|пульс);
+<enable> = (включить|показать|вывести);
 
-public <query> = <enable> <words>;
+<command_organs> = (узи|рентген);
+<organs> = (почка|почки|почку);
+
+<data> = (анализ крови|пульс|давление);
+
+public <query> = <enable> (<command_organs> <organs> | <data>);
