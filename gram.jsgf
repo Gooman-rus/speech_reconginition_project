@@ -9,4 +9,6 @@ grammar mygrammar;
 
 <data> = (анализ крови|пульс|давление);
 
-public <query> = <enable> (<command_organs> <organs> | <data>);
+<cancel> = (отмена);
+
+public <query> = <enable> (<command_organs> <organs> | <data>) | <cancel>;
